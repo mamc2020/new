@@ -3,8 +3,8 @@ pipeline{
    stages{
       stage("build"){
          steps{
-            echo 'building the application...'
-            echo 'new build'
+            git 'https://github.com/mamc2020/new.git'
+            sh './mvnw clean compile'
          }
       }
    }
